@@ -6,7 +6,17 @@ import Glasses from "../../img/glasses.png";
 import Humble from "../../img/humble.png";
 import { themeContext } from "../../Context";
 import { motion } from "framer-motion";
-import {Link} from "react-scroll";
+import { Link } from "react-scroll";
+
+// Import videos from the src folder
+import skaterVideo from "../../videos/video.mp4";
+import pianistVideo from "../../videos/video2.mp4";
+import swimmerVideo from "../../videos/video3.mp4";
+
+// Sample video sources
+const skaterVideos = [skaterVideo];
+const pianistVideos = [pianistVideo];
+const swimmerVideos = [swimmerVideo];
 
 const Services = () => {
   // context
@@ -27,17 +37,15 @@ const Services = () => {
         <span style={{ color: darkMode ? "white" : "" }}>About</span>
         <span>Me</span>
         <spane>
-        When I'm not acting, you can find me swimming, skating, or playing the piano
-
+          When I'm not acting, you can find me swimming, skating, or playing the piano
           <br />
           I'm a pet lover and adore spending time with my furry friends.
         </spane>
         <Link to="works" smooth={true} spy={true}>
-  <button className="button i-button" style={{ width: "200px", marginTop: "20px" }}>
-    Learn More
-  </button>
-</Link>
-
+          <button className="button i-button" style={{ width: "200px", marginTop: "20px" }}>
+            Learn More
+          </button>
+        </Link>
         <div className="blur s-blur1" style={{ background: "#ABF1FF94" }}></div>
       </div>
       {/* right */}
@@ -52,6 +60,7 @@ const Services = () => {
             emoji={HeartEmoji}
             heading={"Skater"}
             detail={"Fitness Skater, Cruise Skater, Dance Skater"}
+            videos={skaterVideos}
           />
         </motion.div>
         {/* second card */}
@@ -62,8 +71,9 @@ const Services = () => {
         >
           <Card
             emoji={Glasses}
-            heading={"Pionist"}
-            detail={"Soloist, Concert Pionist, Blues Pionist"}
+            heading={"Pianist"}
+            detail={"Soloist, Concert Pianist, Blues Pianist"}
+            videos={pianistVideos}
           />
         </motion.div>
         {/* 3rd */}
@@ -75,16 +85,12 @@ const Services = () => {
           <Card
             emoji={Humble}
             heading={"Swimmer"}
-            detail={
-              "Open Water Swimming, Underwater Swimming, Endurance Swimming"
-            }
+            detail={"Open Water Swimming, Underwater Swimming, Endurance Swimming"}
             color="rgba(252, 166, 31, 0.45)"
+            videos={swimmerVideos}
           />
         </motion.div>
-        <div
-          className="blur s-blur2"
-          style={{ background: "var(--purple)" }}
-        ></div>
+        <div className="blur s-blur2" style={{ background: "var(--purple)" }}></div>
       </div>
     </div>
   );

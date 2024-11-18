@@ -57,7 +57,7 @@ const Works = () => {
           <img src={Upwork} alt="" style={{ width: '150px', height: '150px', objectFit: 'contain' }} />
           </div>
           <div className="w-secCircle">
-            <img src={Fiverr} alt=""  style={{ width: '100px', height: '100px', objectFit: 'cover', 
+            <img src={Fiverr} alt=""  style={{ width: '150px', height: '100px', objectFit: 'cover', 
     objectPosition: 'right'}}/>
           </div>
           <div className="w-secCircle">
@@ -69,7 +69,9 @@ const Works = () => {
           <div className="w-secCircle" >
           <img src={Facebook} alt="" style={{ width: '150px', height: '150px', objectFit: 'contain' }} />
           </div>
+          
         </motion.div>
+        
         {/* background Circles */}
         <div className="w-backCircle blueCircle"></div>
         <div className="w-backCircle yellowCircle"></div>
